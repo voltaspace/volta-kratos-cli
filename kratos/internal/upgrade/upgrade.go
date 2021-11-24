@@ -3,7 +3,7 @@ package upgrade
 import (
 	"fmt"
 
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/base"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/base"
 
 	"github.com/spf13/cobra"
 )

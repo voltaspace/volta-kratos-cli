@@ -3,15 +3,16 @@ package main
 import (
 	"log"
 
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/change"
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/project"
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/proto"
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/run"
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/upgrade"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/change"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/project"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/proto"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/run"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/upgrade"
 
 	"github.com/spf13/cobra"
 )
 const release = "v2.1.2"
+
 var rootCmd = &cobra.Command{
 	Use:     "kratos",
 	Short:   "Kratos: An elegant toolkit for Go microservices.",

@@ -6,7 +6,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/base"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/base"
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/fatih/color"

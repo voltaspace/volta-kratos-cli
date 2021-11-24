@@ -1,4 +1,4 @@
-module github.com/voltaspace/volta-kratos-cli/kratos/v1
+module github.com/voltaspace/volta-kratos-cli/kratos/v2
 
 go 1.16
 

@@ -1,9 +1,9 @@
 package proto
 
 import (
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/proto/add"
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/proto/client"
-	"github.com/voltaspace/volta-kratos-cli/kratos/v1/internal/proto/server"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/proto/add"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/proto/client"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/proto/server"
 
 	"github.com/spf13/cobra"
 )

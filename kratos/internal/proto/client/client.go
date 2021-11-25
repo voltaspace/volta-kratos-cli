@@ -120,8 +120,6 @@ func generate(proto string, args []string) error {
 	}
 	protos := strings.Split(proto,".")
 	model := protos[0]+".pb.go"
-	fmt.Println(model)
-
 	areas, err := inject.ParseFile(model,nil)
 	if err != nil {
 		fmt.Printf("proto-tag: %s\n", err.Error())

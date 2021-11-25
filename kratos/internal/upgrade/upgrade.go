@@ -22,7 +22,7 @@ func Run(cmd *cobra.Command, args []string) {
 		"github.com/go-kratos/kratos/cmd/kratos/v2",
 		"github.com/go-kratos/kratos/cmd/protoc-gen-go-http/v2",
 		"github.com/go-kratos/kratos/cmd/protoc-gen-go-errors/v2",
-		"github.com/golang/protobuf/protoc-gen-go",
+		"google.golang.org/protobuf/cmd/protoc-gen-go",
 		"github.com/favadi/protoc-go-inject-tag",
 		"google.golang.org/grpc/cmd/protoc-gen-go-grpc",
 		"github.com/envoyproxy/protoc-gen-validate",

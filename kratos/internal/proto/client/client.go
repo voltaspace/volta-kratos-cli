@@ -3,6 +3,7 @@ package client
 import (
 	"errors"
 	"fmt"
+	"github.com/voltaspace/volta-kratos-cli/kratos/v2/internal/proto/inject"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -119,15 +120,19 @@ func generate(proto string, args []string) error {
 	}
 	protos := strings.Split(proto,".")
 	model := protos[0]+".pb.go"
-	fd = exec.Command("protoc-go-inject-tag","-input="+model)
-	fd.Stdout = os.Stdout
-	fd.Stderr = os.Stderr
-	fd.Dir = "."
-	if err := fd.Run(); err != nil {
-		return errors.New("[kratos-proto-tag]:"+err.Error())
+	fmt.Println(model)
+
+	areas, err := inject.ParseFile(model,nil)
+	if err != nil {
+		fmt.Printf("proto-tag: %s\n", err.Error())
+		return nil
 	}
-	fmt.Printf("proto: %s\n", proto)
-	fmt.Printf("proto-tag: %s\n", model)
+	if err = inject.WriteFile(model, areas); err != nil {
+		fmt.Printf("proto-tag: %s\n", err.Error())
+		return nil
+	}
+	fmt.Printf("proto: %s success!\n", proto)
+	fmt.Printf("proto-tag: %s success!\nvolta-kratos-cli v2.1.1", model)
 	return nil
 }
 
@@ -138,3 +143,6 @@ func pathExists(path string) bool {
 	}
 	return true
 }
+
+
+

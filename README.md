@@ -16,5 +16,5 @@ message testMessage {
 type TestMessage struct{    
     Test1 string `protobuf:"varint,1,opt,name=test1,proto3" json:"test1" gorm:"-"`   
     Test2 string `protobuf:"varint,2,opt,name=test2,proto3" json:"test2"`  
-`}  
+}  
 ~~~~

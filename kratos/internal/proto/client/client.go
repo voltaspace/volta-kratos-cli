@@ -118,7 +118,7 @@ func generate(proto string, args []string) error {
 	if err := fd.Run(); err != nil {
 		return errors.New("[kratos-proto]:"+err.Error())
 	}
-	protos := strings.Split(proto,".")
+	protos := strings.Split(proto,".proto")
 	model := protos[0]+".pb.go"
 	areas, err := inject.ParseFile(model,nil)
 	if err != nil {
